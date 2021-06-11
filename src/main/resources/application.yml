@@ -1,2 +1,19 @@
 server:
   port: 8087
+
+
+logging:
+  level:
+    ru.dfed.apachekafkaconsumer: INFO
+    org:
+      apache:
+        kafka:
+          clients:
+            NetworkClient: ERROR
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: group_id
